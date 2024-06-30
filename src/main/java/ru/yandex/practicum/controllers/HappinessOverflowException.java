@@ -1,13 +1,14 @@
 package ru.yandex.practicum.controllers;
 
-import lombok.Getter;
 
-@Getter
-public class HappinessOverflowException extends RuntimeException{
+public class HappinessOverflowException extends RuntimeException {
     private Integer happinessLevel;
 
-    public HappinessOverflowException(String message, Integer happinessLevel) {
-        super(message);
+    public HappinessOverflowException(Integer happinessLevel) {
         this.happinessLevel = happinessLevel;
+    }
+
+    public Integer getHappinessLevel() {
+        return happinessLevel;
     }
 }
